@@ -14,7 +14,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://removenegativearticles.com"),
+  metadataBase: new URL("https://www.removenegativearticles.com"),
   title: "Online Reputation Management | removenegativearticles.com",
   description: "Remove Negative Articles From Google & Protect Your Online Reputation",
 };

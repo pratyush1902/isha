@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/private/'],
         },
-        sitemap: 'https://removenegativearticles.com/sitemap.xml',
+        sitemap: 'https://www.removenegativearticles.com/sitemap.xml',
     };
 }

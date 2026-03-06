@@ -96,7 +96,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
                     <p className="mb-4 md:mb-0">
-                        &copy; {currentYear} removenegativearticles.com. All rights reserved.
+                        &copy; {currentYear} www.removenegativearticles.com. All rights reserved.
                     </p>
                     <p>
                         Designed securely for strict reputation management.
