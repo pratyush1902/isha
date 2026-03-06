@@ -1,7 +1,8 @@
 "use client";
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Search, ShieldAlert, ShieldCheck, ArrowRight } from 'lucide-react';
+import { ShieldCheck, ArrowRight } from 'lucide-react';
 
 export default function Hero() {
     return (
@@ -57,82 +58,53 @@ export default function Hero() {
                         </div>
                     </motion.div>
 
-                    {/* Animated Visual */}
+                    {/* Comparison Image Visual */}
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
-                        className="relative lg:h-[600px] w-full flex items-center justify-center"
+                        className="relative w-full flex items-center justify-center"
                     >
-                        <div className="relative w-full max-w-lg glass-dark rounded-2xl p-6 shadow-2xl border border-white/10">
-                            {/* Fake Chrome Top */}
-                            <div className="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
-                                <div className="flex gap-1.5">
-                                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                        <div className="relative w-full max-w-2xl group">
+                            {/* Decorative background glow */}
+                            <div className="absolute -inset-4 bg-gradient-to-r from-red-500/10 to-accent/10 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
+
+                            {/* Main Image Container */}
+                            <div className="relative bg-white p-2 rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
+                                <Image
+                                    src="/hero-comparison.png"
+                                    alt="ORM Comparison: Negative Results vs Positive Results"
+                                    width={1200}
+                                    height={800}
+                                    className="rounded-xl w-full h-auto object-cover"
+                                    priority
+                                />
+
+                                {/* Subtle Overlay Badges */}
+                                <div className="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full bg-red-500/90 text-[10px] font-bold text-white uppercase tracking-wider backdrop-blur-sm shadow-lg">
+                                    Before RNA
                                 </div>
-                                <div className="bg-white/5 rounded flex-1 mx-4 h-6 px-3 flex items-center">
-                                    <span className="text-xs text-slate-400 font-mono">google.com/search</span>
+                                <div className="absolute top-4 right-4 inline-flex items-center px-3 py-1 rounded-full bg-accent text-[10px] font-bold text-white uppercase tracking-wider shadow-lg">
+                                    After RNA
                                 </div>
                             </div>
 
-                            {/* Search Bar */}
-                            <div className="bg-white rounded-full flex items-center px-4 py-3 shadow-sm mb-8">
-                                <Search className="h-5 w-5 text-slate-400 mr-3" />
-                                <div className="flex-1 bg-slate-100 h-2 rounded animate-pulse"></div>
-                            </div>
-
-                            {/* Search Results */}
-                            <div className="space-y-6">
-                                {/* Result 1 - Being Removed */}
-                                <motion.div
-                                    initial={{ opacity: 1, x: 0 }}
-                                    animate={{ opacity: 0, x: 100 }}
-                                    transition={{ delay: 2, duration: 1, repeat: Infinity, repeatDelay: 5 }}
-                                    className="bg-red-50/10 rounded-lg p-4 border border-red-500/20 relative overflow-hidden"
-                                >
-                                    <div className="absolute top-2 right-2 flex items-center text-red-400 text-xs font-semibold">
-                                        <ShieldAlert className="w-4 h-4 mr-1" />
-                                        Removing...
+                            {/* Floating Decorative Elements */}
+                            <motion.div
+                                animate={{ y: [0, -10, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                className="absolute -top-6 -right-6 hidden lg:block"
+                            >
+                                <div className="bg-white p-3 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                                        <ShieldCheck className="w-6 h-6" />
                                     </div>
-                                    <div className="w-48 h-3 bg-slate-600 rounded mb-2"></div>
-                                    <div className="w-3/4 h-2 bg-slate-500 rounded mb-2"></div>
-                                    <div className="w-2/3 h-2 bg-slate-500 rounded"></div>
-                                </motion.div>
-
-                                {/* Result 2 - Positive */}
-                                <motion.div
-                                    initial={{ y: 0 }}
-                                    animate={{ y: -88 }}
-                                    transition={{ delay: 3, duration: 0.5, repeat: Infinity, repeatDelay: 5.5 }}
-                                    className="bg-white/5 rounded-lg p-4 border border-white/10 relative"
-                                >
-                                    <div className="absolute top-2 right-2 flex items-center text-accent text-xs font-semibold">
-                                        <ShieldCheck className="w-4 h-4 mr-1" />
-                                        Protected
+                                    <div>
+                                        <p className="text-xs font-bold text-slate-800">100% Guaranteed</p>
+                                        <p className="text-[10px] text-slate-500">Legal Removal</p>
                                     </div>
-                                    <div className="w-56 h-3 bg-secondary-light rounded mb-2"></div>
-                                    <div className="w-full h-2 bg-slate-400 rounded mb-2"></div>
-                                    <div className="w-4/5 h-2 bg-slate-400 rounded"></div>
-                                </motion.div>
-
-                                {/* Result 3 - New Positive Appearing */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: -88 }}
-                                    transition={{ delay: 3.5, duration: 0.5, repeat: Infinity, repeatDelay: 5 }}
-                                    className="bg-white/5 rounded-lg p-4 border border-white/10 relative"
-                                >
-                                    <div className="absolute top-2 right-2 flex items-center text-accent text-xs font-semibold">
-                                        <ShieldCheck className="w-4 h-4 mr-1" />
-                                        Verified
-                                    </div>
-                                    <div className="w-52 h-3 bg-accent rounded mb-2"></div>
-                                    <div className="w-11/12 h-2 bg-slate-400 rounded mb-2"></div>
-                                    <div className="w-full h-2 bg-slate-400 rounded"></div>
-                                </motion.div>
-                            </div>
+                                </div>
+                            </motion.div>
                         </div>
                     </motion.div>
 

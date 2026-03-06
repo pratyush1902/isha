@@ -15,7 +15,7 @@ const faqs = [
     },
     {
         question: "Is content removal guaranteed?",
-        answer: "While no ethical ORM firm can guarantee the removal of every single digital asset (as third-party platforms have their own policies), we boast a 99% success rate on cases we accept. If we determine we cannot completely remove a link, our guaranteed suppression strategies will bury it off the first page of search results where it is rarely seen.",
+        answer: "While no ethical ORM firm can guarantee the removal of every single digital asset (as third-party platforms have their own policies), we boast a 90% success rate on cases we accept. If we determine we cannot completely remove a link, our guaranteed suppression strategies will bury it off the first page of search results where it is rarely seen.",
     },
     {
         question: "Do you notify the person who posted the negative content?",

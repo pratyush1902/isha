@@ -9,7 +9,7 @@ import { Users, Shield, Target, Award } from "lucide-react";
 const stats = [
     { label: "Years Experience", value: "12+" },
     { label: "Cases Resolved", value: "5,000+" },
-    { label: "Success Rate", value: "99%" },
+    { label: "Success Rate", value: "90%" },
     { label: "Countries Served", value: "45+" },
 ];
 

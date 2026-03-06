@@ -66,7 +66,7 @@ export default function TrustMetrics() {
         { end: 12, suffix: "+", title: "Years Experience" },
         { end: 1000, suffix: "+", title: "Clients Served" },
         { end: 20, suffix: "+", title: "Industries Covered" },
-        { end: 99, suffix: "%", title: "Success Rate" },
+        { end: 90, suffix: "%", title: "Success Rate" },
     ];
 
     // Setup rotating globe effect
