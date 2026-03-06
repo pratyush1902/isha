@@ -32,8 +32,17 @@ export default function BlogGrid({ posts }: BlogGridProps) {
                             transition={{ delay: idx * 0.1, duration: 0.5 }}
                             className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col"
                         >
-                            {/* Placeholder for Image */}
-                            <div className={`h-48 w-full ${post.image || 'bg-slate-100'} relative overflow-hidden`}>
+                            {/* Image Container */}
+                            <div className="h-48 w-full relative overflow-hidden">
+                                {post.image && post.image.startsWith('bg-') ? (
+                                    <div className={`absolute inset-0 ${post.image}`}></div>
+                                ) : (
+                                    <img
+                                        src={post.image || '/images/blog/blog-feature.png'}
+                                        alt={post.title}
+                                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                )}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary flex items-center gap-1 shadow-sm">
                                     <Tag className="w-3 h-3" />

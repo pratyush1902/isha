@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function WhatsAppWidget() {
     const [isVisible, setIsVisible] = useState(false);
-    const whatsappNumber = "18001234567"; // Placeholder number
+    const whatsappNumber = "918448691574"; // Updated number
     const defaultMessage = "Hi, I'm interested in a free reputation analysis.";
 
     // Show widget after a small delay to not block initial render/animations

@@ -25,7 +25,7 @@ export default function Contact() {
         const encodedMessage = encodeURIComponent(text);
 
         // A placeholder number with country code, no +, e.g. 91 for India
-        const whatsappNumber = "919876543210";
+        const whatsappNumber = "918448691574";
 
         // Open WhatsApp directly
         window.location.href = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -71,7 +71,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <p className="text-sm text-slate-500 font-medium">Direct Line</p>
-                                    <p className="text-lg font-bold text-slate-900">+1 (800) 123-4567</p>
+                                    <p className="text-lg font-bold text-slate-900">+91 84486 91574</p>
                                 </div>
                             </div>
 
