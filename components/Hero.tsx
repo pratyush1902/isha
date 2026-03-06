@@ -72,21 +72,13 @@ export default function Hero() {
                             {/* Main Image Container */}
                             <div className="relative bg-white p-2 rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
                                 <Image
-                                    src="/hero-comparison.png"
+                                    src="/hero.png"
                                     alt="ORM Comparison: Negative Results vs Positive Results"
                                     width={1200}
                                     height={800}
                                     className="rounded-xl w-full h-auto object-cover"
                                     priority
                                 />
-
-                                {/* Subtle Overlay Badges */}
-                                <div className="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full bg-red-500/90 text-[10px] font-bold text-white uppercase tracking-wider backdrop-blur-sm shadow-lg">
-                                    Before RNA
-                                </div>
-                                <div className="absolute top-4 right-4 inline-flex items-center px-3 py-1 rounded-full bg-accent text-[10px] font-bold text-white uppercase tracking-wider shadow-lg">
-                                    After RNA
-                                </div>
                             </div>
 
                             {/* Floating Decorative Elements */}
